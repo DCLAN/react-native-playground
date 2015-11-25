@@ -18,8 +18,16 @@ var HelloWorld = React.createClass({
     var I_HAVE_NO_IDEA_WHAT_IM_DOING = "https://www.rover.com/blog/wp-content/uploads/2014/10/bailey-computer1.png";
     return (
       <View style={styles.container}>
-        <Image style={styles.image}
-          source={{uri: I_HAVE_NO_IDEA_WHAT_IM_DOING }}/>
+        <Text style={styles.welcome}>
+          Welcome to React Native!
+        </Text>
+        <Text style={styles.instructions}>
+          To get started, edit index.ios.js
+        </Text>
+        <Text style={styles.instructions}>
+          Press Cmd+R to reload,{'\n'}
+          Cmd+D or shake for dev menu
+        </Text>
       </View>
     );
   }
@@ -31,10 +39,6 @@ var styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
-  },
-  image: {
-    height: 300,
-    width: 420,
   },
 });
 

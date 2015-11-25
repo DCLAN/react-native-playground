@@ -13,21 +13,25 @@ var {
   Image,
 } = React;
 
+var MOCKED_MOVIE_DATA = [
+  {
+    title: 'Star Wars: The Force Awakens',
+    year: '2015',
+    posters: {
+      thumbnail: 'http://i.imgur.com/KE3RHWS.jpg'
+    }
+  }
+];
 
 var HelloWorld = React.createClass({
   render: function() {
+    var movie = MOCKED_MOVIE_DATA[0];
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <Text>{movie.title}</Text>
+        <Text>{movie.year}</Text>
+        <Image style={styles.thumbnail}
+          source={{uri: movie.posters.thumbnail}}/>
       </View>
     );
   }
@@ -49,6 +53,10 @@ var styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
+  },
+  thumbnail: {
+    height: 50,
+    width: 44,
   },
 });
 

@@ -13,9 +13,9 @@ var {
   Image,
 } = React;
 
+
 var HelloWorld = React.createClass({
   render: function() {
-    var I_HAVE_NO_IDEA_WHAT_IM_DOING = "https://www.rover.com/blog/wp-content/uploads/2014/10/bailey-computer1.png";
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
@@ -39,6 +39,16 @@ var styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+  },
+  welcome: {
+   fontSize: 20,
+   textAlign: 'center',
+   margin: 10,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
   },
 });
 
